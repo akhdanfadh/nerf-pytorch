@@ -1,0 +1,39 @@
+# https://stackoverflow.com/questions/62983756/what-is-pyproject-toml-file-for
+# https://stackoverflow.com/questions/69711606/how-to-install-a-package-using-pip-in-editable-mode-with-pyproject-toml
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "radiance-fields"
+version = "0.0.1"
+description = "Neural Radiance Fields (NeRF) library in PyTorch"
+authors = [{ name = "Akhdan Fadhilah", email = "akhdan.fadh@gmail.com" }]
+dependencies = [
+    "torch>=2.2.0",
+    "torchvision>=0.17.0",
+    "torchmetrics[image]",
+    "tensorboard",
+    "wandb",
+    "opencv-python",
+    "imageio",
+    "hydra-core",
+    "typeguard",
+    "jaxtyping",
+    "tqdm",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+repository = "https://github.com/akhdanfadh/nerf-pytorch"

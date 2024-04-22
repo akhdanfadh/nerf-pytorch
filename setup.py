@@ -1,0 +1,36 @@
+from setuptools import find_packages, setup
+
+setup(
+    name="radiance-fields",
+    packages=find_packages(include=["radiance_fields", "radiance_fields.*"]),
+    version="0.0.1",
+    license=open("LICENSE", "r", encoding="utf-8").read(),
+    description="Neural Radiance Fields (NeRF) library in PyTorch",
+    long_description=open("README.md", "r", encoding="utf-8").read(),
+    long_description_content_type="text/markdown",
+    author="Akhdan Fadhilah",
+    author_email="akhdan.fadh@gmail.com",
+    url="https://github.com/akhdanfadh/nerf-pytorch",
+    python_requires=">=3.10",
+    install_requires=[
+        "torch>=2.2.0",
+        "torchvision>=0.17.0",
+        "torchmetrics[image]",
+        "tensorboard",
+        "wandb",
+        "opencv-python",
+        "imageio",
+        "hydra-core",
+        "typeguard",
+        "jaxtyping",
+        "tqdm",
+    ],
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Intended Audience :: Developers",
+        "Natural Language :: English",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    ],
+)
