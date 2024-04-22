@@ -1,0 +1,5 @@
+seed: 42
+cuda:
+  device_id: 0
+torch:
+  num_threads: 1

@@ -1,0 +1,24 @@
+num_iter: 500  # total epochs = num_iter // len(train_dataset)
+warmup_epochs: 5  # warm-up during early stage of training, see runners/train.py
+num_ray_batch: 20  # divide rays into batches, see radiance_fields/renderer/volume_renderer.py
+save_epoch_ckpt: 1  # save checkpoint every log_epoch_ckpt epochs
+
+optimizer:
+  type: Adam
+  args:  # see torch.optim.Adam
+    lr: 0.0005
+    eps: 1e-8
+
+scheduler:
+  init_lr: 0.0005
+  end_lr: 0.00005
+  type: ExponentialLR
+  args: {} # see torch.optim.lr_scheduler.ExponentialLR
+
+loss_fn:
+  type: MSELoss
+  args: {} # see torch.nn.MSELoss
+
+validation:
+  validate_every: 2  # validate every THIS epochs
+  num_batch: 5  # number of batches to validate

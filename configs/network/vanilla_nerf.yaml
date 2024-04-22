@@ -1,0 +1,5 @@
+type: NeRF
+args:  # see radiance_fields/network/vanilla_nerf.py
+  pos_dim: null  # placeholder argument
+  view_dir_dim: null  # placeholder argument
+  feat_dim: 256

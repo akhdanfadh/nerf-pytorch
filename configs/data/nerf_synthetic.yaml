@@ -1,0 +1,11 @@
+batch_size: 1  # TODO: currently only support batch_size=1, corresponds to num_iter in cfg.trainer
+shuffle: true
+num_workers: 4
+
+type: NeRFSyntheticDataset
+args:  # see radiance_fields/data_loader/nerf_synthetic.py
+  root_dir: data/nerf_synthetic
+  scene_name: lego
+  data_type: null
+  half_res: false
+  white_bg: true

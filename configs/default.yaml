@@ -1,0 +1,16 @@
+defaults:
+  - data: nerf_synthetic
+  - device: default
+  - network: vanilla_nerf
+  - renderer: volume_renderer
+  - scene: cube
+  - signal_encoder: positional
+  - trainer: debug
+  - _self_
+
+use_wandb: false
+
+resume: null  # post-training action (render, evaluate, further training, etc.)
+  # log_dir:  # path to the log directory
+  # update:  # keys to update in the config, e.g., num_iter
+  #   trainer.num_iter: 200

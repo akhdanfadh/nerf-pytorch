@@ -1,0 +1,13 @@
+t_near: 2.0
+t_far: 6.0
+num_pixels: 2048
+num_samples_coarse: 64
+num_samples_fine: 128
+
+integrator:
+  type: QuadratureIntegrator
+  args: {} # see radiance_fields/renderer/integrator/quadrature.py
+
+sampler:
+  type: StratifiedSampler
+  args: {} # see radiance_fields/renderer/ray_sampler/stratified.py

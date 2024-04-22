@@ -1,0 +1,13 @@
+coordinate:
+  type: PositionalEncoder
+  args:  # see radiance_fields/signal_encoder/positional.py
+    in_dim: 3
+    embed_level: 10
+    include_input: true
+
+direction:
+  type: PositionalEncoder
+  args:  # see radiance_fields/signal_encoder/positional.py
+    in_dim: 3
+    embed_level: 3
+    include_input: true

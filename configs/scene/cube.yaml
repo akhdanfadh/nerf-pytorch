@@ -1,0 +1,2 @@
+type: PrimitiveCube
+args: {} # see radiance_fields/scene/primitives/cube.py
